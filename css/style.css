@@ -1,0 +1,456 @@
+@charset "utf-8";
+/* Обнуление */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td {  
+  padding: 0; 
+  margin: 0; 
+  } 
+table { 
+  border-collapse: collapse; 
+  border-spacing: 0; 
+  } 
+fieldset,img {  
+  border: 0; 
+  } 
+address,caption,cite,code,dfn,em,strong,th,var { 
+  font-weight: normal; 
+  font-style: normal; 
+  } 
+ol,ul { 
+  list-style: none; 
+  } 
+caption,th { 
+  text-align: left; 
+  } 
+h1,h2,h3,h4,h5,h6 { 
+  font-weight: normal; 
+  font-size: 100%; 
+  } 
+q:before,q:after { 
+  content:''; 
+  } 
+abbr,acronym { border: 0; 
+  } 
+  
+
+/* CSS Document */
+
+*{
+padding:0;
+margin:0;
+}
+
+html, body {
+height:100%;
+width:100%;
+background-color:#FFF;
+margin: 0;
+padding: 0;
+font-family:'Roboto', sans-serif;
+}
+
+.logo {
+	float:left;
+	width:300px;
+	margin:9px 20px;
+}
+
+#header{
+	     position: absolute; /* Абсолютное позиционирование */
+left:0px;
+top:0px;
+background-color:rgba(0, 150, 136, 0.9);
+height:50px;
+width:100%;
+box-shadow: 0 5px 30px 0 #000;
+-moz-box-shadow: 0 5px 30px 0 #000;
+-webkit-box-shadow: 0 5px 30px 0 #000;
+-khtml-box-shadow: 0 5px 30px 0 #000;
+z-index:10000;
+
+} 
+
+
+
+#footer{
+	position: absolute; /* Абсолютное позиционирование */
+right:0px;
+bottom:7px;
+height:40px;
+margin:0 auto 0;
+padding:0;
+width:400px;
+background-color:#009688;
+box-shadow: 0 0 30px 0 #000;
+-moz-box-shadow: 0 0 30px 0 #000;
+-webkit-box-shadow: 0 0 30px 0 #000;
+-khtml-box-shadow: 0 0 30px 0 #000;
+z-index:10000;
+color:#E8EAF6;
+}
+
+
+#map {
+     width: 100%;
+	 height: 100%;
+}
+
+#mainMenu {
+  margin: 0 20px;
+  padding: 0;
+  list-style-type: none;
+  float:right;
+}
+#mainMenu li { display: inline; }
+#mainMenu li a {
+	margin: 7px 3px;
+	padding: 8px;
+	cursor: pointer;
+	text-decoration: none;
+	color:#E8EAF6;
+	display: inline-block;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: box-shadow;
+  transition-property: box-shadow;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  border-radius:4px;
+  font-size:16px;
+}
+
+
+#mainMenu li a:hover {
+	box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+}
+
+.nullbar {
+	position: absolute; /* Абсолютное позиционирование */
+left:0px;
+top:0px;
+	background-color:rgba(0, 150, 136, 1);
+	width:100%;
+	height:10px;
+	z-index:10001;
+}
+
+.nullbar2 {
+	position: absolute; /* Абсолютное позиционирование */
+	left:0px;
+	bottom:0px;
+	background-color:rgba(0, 150, 136, 1);
+	width:100%;
+	height:10px;
+	z-index:10001;
+}
+
+.copy {
+	float:right;
+	margin:0 20px;
+	line-height:40px;
+	font-size:14px;
+	width:300px;
+}
+
+.news {
+	left: 20px; 
+	top: 100px;
+	width: 200px;;
+	background: #eee;
+	position: absolute;
+	z-index: 10001;
+	padding: 30px 50px 34px 70px;
+	-moz-box-shadow: 0 0 10px rgba(0,0,0,.4);
+	-webkit-box-shadow: 0 0 10px rgba(0,0,0,.4);
+	-box-shadow: 0 0 10px rgba(0,0,0,.4);
+	border-left:10px solid #D32F2F; 
+	font-size:14px;
+}
+
+
+.contentMain {
+	position: absolute;
+	left: 50%; 
+	top: 100px;
+	width: 500px;
+	margin-left:-260px;
+	background: #eee;
+	z-index: 10001;
+	padding: 30px 50px 34px;
+	-moz-box-shadow: 0 0 15px rgba(0,0,0,.4);
+	-webkit-box-shadow: 0 0 15px rgba(0,0,0,.4);
+	-box-shadow: 0 0 15px rgba(0,0,0,.4);
+	border-left:10px solid rgba(0, 150, 136, 1);
+}
+
+
+
+/*	--------------------------------------------------
+	Reveal Modals
+	-------------------------------------------------- */
+		
+	.reveal-modal-bg { 
+		position: fixed; 
+		height: 100%;
+		width: 100%;
+		background: #000;
+		background: rgba(0,0,0,.0);
+		z-index: 1000;
+		display: none;
+		top: 0;
+		left: 0; 
+		}
+		
+	.reveal-modal-bg #filters {
+		background:none;
+	}
+	
+	.reveal-modal {
+		visibility: hidden;
+		top: 20px; 
+		right: 20px;
+		margin-left: -300px;
+		width: 520px;
+		background: #eee;
+		position: absolute;
+		z-index: 10003;
+		padding: 30px 40px 44px;
+		-moz-box-shadow: 0 0 30px rgba(0,0,0,.4);
+		-webkit-box-shadow: 0 0 30px rgba(0,0,0,.4);
+		-box-shadow: 0 0 30px rgba(0,0,0,.4);
+		}
+         
+          
+		
+	.reveal-modal.small 		{ width: 200px; margin-left: -140px;}
+	.reveal-modal.medium 		{ width: 400px; margin-left: -240px;}
+	.reveal-modal.large 		{ width: 600px; margin-left: -340px;}
+	.reveal-modal.xlarge 		{ width: 800px; margin-left: -440px;}
+	
+	.reveal-modal .close-reveal-modal, .news .close-reveal-modal, .close-contenMain {
+		font-size: 22px;
+		line-height: .5;
+		position: absolute;
+		top: 8px;
+		right: 11px;
+		color: #aaa;
+		text-shadow: 0 -1px 1px rbga(0,0,0,.6);
+		font-weight: bold;
+		cursor: pointer;
+		} 
+	/*
+		
+	NOTES
+	
+	Close button entity is &#215;
+	
+	Example markup
+	
+	<div id="myModal" class="reveal-modal">
+		<h2>Awesome. I have it.</h2>
+		<p class="lead">Your couch.  I it's mine.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ultrices aliquet placerat. Duis pulvinar orci et nisi euismod vitae tempus lorem consectetur. Duis at magna quis turpis mattis venenatis eget id diam. </p>
+		<a class="close-reveal-modal">&#215;</a>
+	</div>
+	
+	*/
+	
+	.navbar-form {
+  padding: 10px 15px;
+  margin-top: 8px;
+  margin-right: -15px;
+  margin-bottom: 8px;
+  margin-left: -15px;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .1), 0 1px 0 rgba(255, 255, 255, .1);
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, .1), 0 1px 0 rgba(255, 255, 255, .1);
+}
+
+@media (min-width: 768px) {
+  .navbar-form .form-group {
+    display: inline-block;
+    margin-bottom: 0;
+    vertical-align: middle;
+  }
+  .navbar-form .form-group-reg {
+    margin-bottom: 10px;
+    vertical-align: middle;
+	}
+  .navbar-form .form-control {
+    display: inline-block;
+    width: auto;
+    vertical-align: middle;
+  }
+  .navbar-form .form-control-static {
+    display: inline-block;
+  }
+  .navbar-form .input-group {
+    display: inline-table;
+    vertical-align: middle;
+  }
+  .navbar-form .input-group .input-group-addon,
+  .navbar-form .input-group .input-group-btn,
+  .navbar-form .input-group .form-control {
+    width: auto;
+  }
+  .navbar-form .input-group > .form-control {
+    width: 100%;
+  }
+  .navbar-form .control-label {
+    margin-bottom: 0;
+    vertical-align: middle;
+  }
+  .navbar-form .radio,
+  .navbar-form .checkbox {
+    display: inline-block;
+    margin-top: 0;
+    margin-bottom: 0;
+    vertical-align: middle;
+  }
+  .navbar-form .radio label,
+  .navbar-form .checkbox label {
+    padding-left: 0;
+  }
+  .navbar-form .radio input[type="radio"],
+  .navbar-form .checkbox input[type="checkbox"] {
+    position: relative;
+    margin-left: 0;
+  }
+  .navbar-form .has-feedback .form-control-feedback {
+    top: 0;
+  }
+}
+@media (max-width: 767px) {
+  .navbar-form .form-group {
+    margin-bottom: 5px;
+  }
+  .navbar-form .form-group:last-child {
+    margin-bottom: 0;
+  }
+}
+@media (min-width: 768px) {
+  .navbar-form {
+    width: auto;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-right: 0;
+    margin-left: 0;
+    border: 0;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  height: 23px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+  -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+       -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+          transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+.form-control:focus {
+  
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px #303F9F;
+          box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px #303F9F;
+		  
+		  box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+		  
+}
+.form-control::-moz-placeholder {
+  color: #999;
+  opacity: 1;       
+}
+.form-control:-ms-input-placeholder {
+  color: #999;
+}
+.form-control::-webkit-input-placeholder {
+  color: #999;
+}
+.form-control[disabled],
+.form-control[readonly],
+fieldset[disabled] .form-control {
+  cursor: not-allowed;
+  background-color: #eee;
+  opacity: 1;
+}
+
+/* Button */
+
+.btn {
+   
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height:22px;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn.active.focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+.btn:hover,
+.btn:focus,
+.btn.focus {
+  color: #333;
+  text-decoration: none;
+}
+.btn:active,
+.btn.active {
+  background-image: none;
+  outline: 0;
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+          box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+}
+
+.btn-success {
+  color: #fff;
+  background-color: rgba(0, 150, 136, 1);
+  margin-left:0;
+}
+.btn-success:hover,
+.btn-success:focus,
+.btn-success.focus,
+.btn-success:active,
+.btn-success.active,
+.open > .dropdown-toggle.btn-success {
+  color: #fff;
+  background-color: rgba(0, 150, 136, 0.9);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+}
+
+
