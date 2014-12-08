@@ -1,4 +1,2 @@
-mskautopoints
+[MAP-Project](http://mskautopoints.ru/)
 =============
-
-MskAutoPoints
