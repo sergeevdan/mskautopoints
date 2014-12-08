@@ -2,18 +2,17 @@
 
 [MAP-Project](http://mskautopoints.ru/) - это новый проект для автомобилистов Москвы от группы разработчиков VEDA Design.
 
-Released under a [BSD license](http://kohanaframework.org/license), Kohana can be used legally for any open source, commercial, or personal project.
+Особенностью данного проекта является то, что проект строится на основе MVC и фреймворке [Kohana] (http://kohanaframework.org)
 
-## Documentation
-Kohana's documentation can be found at <http://kohanaframework.org/documentation> which also contains an API browser.
+## Возможности
+Целью проекта является разработка портала для автомобилистов города Москвы. На портале MskAutoPoints вы сможете найти ближайший автосервис, АЗС, автомойку или другую точку обслуживания авто. Также вы сможете рассказать остальным свое мнение о любой авто-точке, просмотреть рейтинг или отзывы об интересующем Вас месте.
 
-The `userguide` module included in all Kohana releases also allows you to view the documentation locally. Once the `userguide` module is enabled in the bootstrap, it is accessible from your site via `/index.php/guide` (or just `/guide` if you are rewriting your URLs).
+## Обновления
+В данный момент реализованы следующие функции:
+* Регистрация пользователя
+* Отправка письма об успешной регистрации и данными пользователя на почтовый адрес, указаный при регистрации
+* Авторизация пользователя
+* Распределение ролей (групп) пользователей с разными правами
+* Частично доработан интерфейс портала на сайте <http://mskautopoints.ru>
 
-## Reporting bugs
-If you've stumbled across a bug, please help us out by [reporting the bug](http://dev.kohanaframework.org/projects/kohana3/) you have found. Simply log in or register and submit a new issue, leaving as much information about the bug as possible, e.g.
-
-* Steps to reproduce
-* Expected result
-* Actual result
-
-This will help us to fix the bug as quickly as possible, and if you'd like to fix it yourself feel free to [fork us on GitHub](https://github.com/kohana) and submit a pull request!
+Мы будем рады представить Вам окончательный проект в кратчайшие сроки!
