@@ -1,6 +1,6 @@
-# Kohana PHP Framework
+# MAP-Project
 
-[Kohana](http://kohanaframework.org/) is an elegant, open source, and object oriented HMVC framework built using PHP5, by a team of volunteers. It aims to be swift, secure, and small.
+[MAP-Project](http://mskautopoints.ru/) - это новый проект для автомобилистов Москвы от группы разработчиков VEDA Design.
 
 Released under a [BSD license](http://kohanaframework.org/license), Kohana can be used legally for any open source, commercial, or personal project.
 
